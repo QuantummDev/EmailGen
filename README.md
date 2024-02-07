@@ -33,17 +33,15 @@ npm install
 
 Before running the program, you need to configure it by providing your Mailcow API credentials and other necessary parameters. Follow these steps:
 
-    Open .env.example file in the project directory.
+Open .env.example file in the project directory.
 
-    Fill in the following fields with your Mailcow API credentials and other desired parameters:
+Fill in the following fields with your Mailcow API credentials and other desired parameters:
 
-    ```
     DOMAIN=mail.yourdomain.xyz
     APIKEY=YourMailCowApiKey
     DEFAULTQUOTA=1024
-    ```
 
-    Rename the .env.example to .env
+Rename the .env.example to .env
 
 ## Usage
 
@@ -53,7 +51,7 @@ To generate Mailcow email accounts, run the following command:
 npm start
 ```
 
-This will execute the program and generate email accounts based on the configuration provided in .env.
+This will execute the program and generate email accounts based on the number and configuration provided in .env.
 
 ## Contributing
 
