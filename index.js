@@ -38,7 +38,7 @@ function generateRandomPassword(length) {
 
 // Function to create multiple user accounts
 async function createMultipleUsers(numAccounts) {
-    const url = process.env.URL;
+    const url = `https://${process.env.DOMAIN}/api/v1/add/mailbox`;
     const apiKey = process.env.APIKEY;
 
     const config = {
@@ -56,13 +56,13 @@ async function createMultipleUsers(numAccounts) {
         const randomLocalPart = generateRandomLocalPart(randomRealName, 3); // Generate a random local part with real name and numbers
         const randomPassword = generateRandomPassword(12); // Generate a random password with 12 characters
 
-        const email = `${randomLocalPart}@saturnaccounts.xyz`;
+        const email = `${randomLocalPart}@${process.env.DOMAIN}`;
         const account = `${email}:${randomPassword}\n`;
         accounts += account;
         try {
             const response = await axios.post(url, {
                 local_part: randomLocalPart,
-                domain: 'saturnaccounts.xyz',
+                domain: process.env.DOMAIN,
                 name: randomRealName,
                 quota: '3072',
                 password: randomPassword,
