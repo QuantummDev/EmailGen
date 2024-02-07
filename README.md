@@ -14,13 +14,13 @@ Before running this program, ensure you have the following installed:
 1. Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/mailcow-email-generator.git
+git clone https://github.com/QuantummDev/EmailGen.git
 ```
 
 ## Navigate to the cloned directory:
 
 ```bash
-cd mailcow-email-generator
+cd EmailGen
 ```
 
 ## Install dependencies:
